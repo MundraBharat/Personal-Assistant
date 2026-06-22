@@ -22,7 +22,7 @@ for conv in conversations:
         _conv[0] = "BHARAT-"
         real_conversations.append(_conv[0]+_conv[1])
     elif _conv[0] == "Buuudddhiiii":
-        _conv[0] = "ANINDITA-"
+        _conv[0] = "chat_trainer-"
         real_conversations.append(_conv[0]+_conv[1])
     else:
         real_conversations.append(_conv[0])
@@ -69,12 +69,12 @@ for conv in real_conversations:
         
 
 
-anindita = []
+chat_trainer = []
 bharat = []
 
 for conv in real_conversations:  
-    if "ANINDITA-" in conv:
-        anindita.append(conv)
+    if "chat_trainer-" in conv:
+        chat_trainer.append(conv)
     else:
         bharat.append(conv)
 
@@ -82,18 +82,18 @@ for conv in real_conversations:
 
 questions = []
 answers = []
-for conv in anindita:
-    questions.append(conv.replace("ANINDITA-",""))
+for conv in chat_trainer:
+    questions.append(conv.replace("chat_trainer-",""))
 
 for conv in bharat:
     answers.append(conv.replace("BHARAT-",""))
 
 #test = {} 
-#for key in range(len(anindita)): 
-#    for value in anindita:
+#for key in range(len(chat_trainer)): 
+#    for value in chat_trainer:
 #        print("inside for")
 #        test[key] = value 
-#        anindita.remove(value)
+#        chat_trainer.remove(value)
 #        break 
 
 
